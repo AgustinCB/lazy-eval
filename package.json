@@ -1,0 +1,26 @@
+{
+  "name": "lazy-eval",
+  "version": "1.0.0",
+  "description": "Library to do lazy evaluation with Typescript",
+  "main": "lib/lazy.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "test": "ava --timeout 30000 test"
+  },
+  "keywords": [
+    "lazy",
+    "evaluation",
+    "typescript"
+  ],
+  "author": "AgustinCB",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "typescript": "^2.4.1"
+  },
+  "dependencies": {
+    "@types/node": "^8.0.13",
+    "ava": "^0.21.0",
+    "tslint": "^5.5.0"
+  }
+}
