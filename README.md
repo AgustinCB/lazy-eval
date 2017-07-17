@@ -5,7 +5,7 @@ Simple and small library to do lazy evaluation (and memoization) with Javascript
 ## Example
 
 ```javascript
-import lazy from '../lib/lazy';
+import lazy from 'lazy-eval';
 
 let counter = 0;
 const executor = () => {
@@ -24,7 +24,7 @@ console.log(lazyVal.isLazy); // true
 ## Also supports types
 
 ```typescript
-import { default as lazy, Lazy }from '../lib/lazy';
+import { default as lazy, Lazy } from 'lazy-eval';
 
 let counter = 0;
 const executor = (): string => {
