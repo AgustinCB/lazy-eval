@@ -7,6 +7,7 @@ const executor = () => {
 };
 const lazyVal = lazy(executor);
 
+console.log(counter) // 0
 console.log(lazyVal()); // 'result'
 console.log(counter); // 1
 console.log(lazyVal()); // 'result'

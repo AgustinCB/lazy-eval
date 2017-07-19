@@ -7,6 +7,7 @@ var executor = function () {
     return 'result';
 };
 var lazyVal = lazy_1["default"](executor);
+console.log(counter); // 0
 console.log(lazyVal()); // 'result'
 console.log(counter); // 1
 console.log(lazyVal()); // 'result'

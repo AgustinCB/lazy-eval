@@ -1,6 +1,7 @@
 export interface Lazy<T> {
     (): T;
+    then<T1>(modifier: (a: T) => Lazy<T1>): Lazy<T1>;
     isLazy: boolean;
 }
-declare const _default: <T>(v: () => T) => Lazy<T>;
-export default _default;
+declare const lazy: <T>(getter: () => T) => Lazy<T>;
+export default lazy;
