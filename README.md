@@ -26,7 +26,7 @@ console.log(lazyVal.isLazy); // true
 
 ### Then operator
 
-```
+```javascript
 import lazy from 'lazy-eval';
 
 let counter = 0;
