@@ -1,6 +1,7 @@
 export interface Lazy<T> {
   (): T;
   then<T1>(modifier: (a: T) => Lazy<T1>): Lazy<T1>;
+  map<T1>(mapper: (a: T) => T1): Lazy<T1>;
   isLazy: boolean;
 };
 
@@ -14,9 +15,8 @@ const lazy = <T>(getter: () => T): Lazy<T> => {
     return _res;
   }
   res.isLazy = true;
-  res.then = function<T1> (modifier: (a: T) => Lazy<T1>): Lazy<T1> {
-    return modifier(res());
-  };
+  res.then = <T1>(modifier: (a: T) => Lazy<T1>): Lazy<T1> => modifier(res());
+  res.map = <T1>(mapper: (a: T) => T1): Lazy<T1> => lazy(() => mapper(res()));
   return res;
 };
 
