@@ -2,7 +2,8 @@
   "name": "lazy-eval",
   "version": "1.0.2",
   "description": "Library to do lazy evaluation with Typescript",
-  "main": "lib/lazy.js",
+  "main": "lib/lazy",
+  "typings": "./lib/lazy",
   "scripts": {
     "build": "tsc",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
