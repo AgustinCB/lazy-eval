@@ -1,9 +1,17 @@
 {
   "name": "lazy-eval",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Library to do lazy evaluation with Typescript",
   "main": "lib/lazy",
   "typings": "./lib/lazy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AgustinCB/npm-lazy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AgustinCB/npm-lazy/issues"
+  },
+  "homepage": "https://github.com/AgustinCB/npm-lazy#readme",
   "scripts": {
     "build": "tsc",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
